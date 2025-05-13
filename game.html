@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title> Memory Game!</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="assets/css/game.css" rel="stylesheet">
+        <link href="assets/css/global.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="parent" style="background-color: red">
+
+            <div class="title" style="background-color: orange">
+            <!-- TODO: Username dynamisch inzetten -->
+            <!-- TODO: Link naar home -->
+                <h1> Memory Game </h1>
+            </div>
+
+            <div class="pairs" style="background-color: yellow">
+                <p id="pairsFound"> Pairs Found: ... </p>
+            </div>
+
+            <div class="remainingTime" style="background-color: green">
+                <label for="time"> Remaining time </label>
+                <br>
+                <progress id="time" max="100" value="86"></progress>
+            </div>
+
+            <div class="gameBoard" style="background-color: blue">
+                <div class="board">
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card open"> H</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card found"> A</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card found"> A</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                    <button class="card"> *</button>
+                </div>
+            </div>
+
+            <div class="gameControls" style="background-color: purple">
+                <button type="reset">New Game</button>
+                <button type="submit">Save Score</button>
+            </div>
+
+            <div class="footer" style="background-color: deeppink">
+                    <p> Made by: Gustavo Costa Araujo </p>
+                    <p> Version: 1.0 </p>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="assets/js/memory.js"></script>
+
+</html>
+
+
+<!--            <div class="top5" style="background-color: blue">-->
+<!--                <h2>Top five</h2>-->
+
+<!--                <ol>-->
+<!--                    <li> Gustavo Costa Araujo: 200</li>-->
+<!--                    <li> Bart Barnard: 250</li>-->
+<!--                    <li> Collin Spaeny: 300</li>-->
+<!--                    <li> Ewoud De Boer: 400</li>-->
+<!--                    <li> Harald Rietdijk: 500</li>-->
+<!--                </ol>-->
+
+<!--                <p> Average playtime: 0s (64s)</p>-->
+<!--            </div>-->

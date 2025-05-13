@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Memory Game!</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <link href="assets/css/index.css" rel="stylesheet">
+        <link href="assets/css/global.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="parent" style="background-color: red">
+
+            <div class="title" style="background-color: orange">
+                <h1> Memory Game </h1>
+            </div>
+
+            <div class="top5" style="background-color: yellow">
+                <h2>Top five</h2>
+                <ol>
+                    <li> Gustavo Costa Araujo: 200</li>
+                    <li> Bart Barnard: 250</li>
+                    <li> Collin Spaeny: 300</li>
+                    <li> Ewoud De Boer: 400</li>
+                    <li> Harald Rietdijk: 500</li>
+                </ol>
+            </div>
+
+            <div class="username" style="background-color: green">
+                <label for="username"> Username </label>
+                <br>
+                <input id="username" placeholder="Enter your name" type="text">
+                <br>
+                <button id="submit"> Submit</button>
+            </div>
+
+            <div class="decorations" style="background-color: blue">
+                <label for="decoration"> Card Decoration: </label>
+                <select id="decoration" name="decoration card">
+                    <option value="*">*</option>
+                    <option value="@">@</option>
+                    <option value="x">x</option>
+                    <option value="o">o</option>
+                </select>
+
+                <br>
+
+                <label for="size"> Board Size: </label>
+                <input id="size" name="size" type="number">
+
+                <br>
+
+                <button name="cardColor"> Card Color</button>
+                <label for="cardColor"></label>
+                <input id="cardColor" type="color">
+
+                <br>
+
+                <button name="cardColor"> Open</button>
+                <label for="open"></label>
+                <input id="open" type="color">
+
+                <br>
+
+                <button name="cardColor"> Gevonden</button>
+                <label for="closed"></label>
+                <input id="closed" type="color">
+            </div>
+
+            <div class="startButton" style="background-color: purple">
+                <button> New Game</button>
+            </div>
+
+            <div class="footer" style="background-color: deeppink">
+                <p>&copy; 2025 Gustavo Henrique Costa Araujo <br> Hanze, HBO-ICT, Software Engineering <br> Webtechnologies III</p>
+            </div>
+
+        </div>
+
+    </body>
+
+    <script src="assets/js/memory.js"></script>
+
+</html>

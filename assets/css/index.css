@@ -1,0 +1,132 @@
+/*-------------------------General-----------------------------*/
+
+
+/*-------------------------Flexbox-----------------------------*/
+
+div.parent {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    align-content: stretch;
+    justify-content: stretch;
+    text-align: center;
+}
+
+div.title:nth-child(1) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+div.top5:nth-child(2) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+div.username:nth-child(3) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+div.decorations:nth-child(4) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+div.startButton:nth-child(5) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+div.footer:nth-child(6) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+}
+
+/*--------------------------Title-------------------------------*/
+
+div.title h1 {
+    font-size: 2em;
+    font-weight: 600;
+
+}
+
+/*--------------------------Top 5------------------------------*/
+
+div.top5 {
+    float: right;
+}
+
+div.top5 p {
+    font-weight: bold;
+}
+
+/*-------------------------Username----------------------------*/
+
+div.username {}
+
+/*------------------------Decorations--------------------------*/
+
+div.decorations {}
+
+/*------------------------Start Button-------------------------*/
+
+div.startButton {}
+
+div.startButton button {
+    width: 10vh;
+    height: 5vh;
+    border-radius: 10px;
+    background-color: blueviolet;
+    color: white;
+}
+
+/*---------------------------Footer---------------------------*/
+div.footer p {
+    font-size: 0.5em;
+}
+
+/*------------------------Media Query-------------------------*/
+
+/* Desktop of groter */
+@media screen and (min-width: 1024px) {
+
+    /*-----------------------Title----------------------*/
+
+    div.title {
+        background: mediumvioletred;
+    }
+
+    /*---------------------Username---------------------*/
+
+    /*--------------------Decorations-------------------*/
+
+    /*--------------------Start Button------------------*/
+
+    /*----------------------Footer----------------------*/
+
+}
