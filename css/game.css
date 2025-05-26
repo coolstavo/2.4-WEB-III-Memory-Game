@@ -8,9 +8,9 @@ div.parent {
     flex-direction: column;
     flex-wrap: nowrap;
     align-items: stretch;
-    align-content: stretch;
     justify-content: stretch;
     text-align: center;
+    height: 100vh;
 }
 
 div.title:nth-child(1) {
@@ -20,15 +20,17 @@ div.title:nth-child(1) {
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 div.pairs:nth-child(2) {
     display: block;
-    flex-grow: 0;
+    flex-grow: 0.5;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 div.remainingTime:nth-child(3) {
@@ -38,24 +40,27 @@ div.remainingTime:nth-child(3) {
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 div.gameBoard:nth-child(4) {
     display: block;
-    flex-grow: 0;
+    flex-grow: 2;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 div.gameControls:nth-child(5) {
     display: block;
-    flex-grow: 0;
+    flex-grow: 0.5;
     flex-shrink: 1;
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 div.footer:nth-child(6) {
@@ -65,6 +70,7 @@ div.footer:nth-child(6) {
     flex-basis: auto;
     align-self: auto;
     order: 0;
+    align-content: center;
 }
 
 /*--------------------------Title-------------------------------*/
@@ -73,6 +79,11 @@ div.title h1 {
     text-align: center;
     font-size: 2em;
     font-weight: 600;
+}
+
+div.title a {
+    text-decoration: none;
+    color: black;
 }
 
 /*----------------------------Pairs-----------------------------*/
@@ -102,26 +113,28 @@ div.remainingTime progress[value]::-webkit-progress-bar{
 }
 
 
-/*------------------------------Board----------------------------------*/
+/*---------------------------Board------------------------------*/
 
 div.board {
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     grid-template-rows: repeat(6, 1fr);
-    gap: 5px;
-    width: 70vh;
-    height: 70vh;
-    padding: 10px;
-    float: left;
+    gap: 3px;
+    width: 90vw; /* Adjust to fit within the viewport */
+    height: 90vw; /* Keep it square */
+    max-width: 80vh; /* Limit size based on viewport height */
+    max-height: 80vh; /* Limit size based on viewport height */
+    margin: auto; /* Center the board */
 }
 
 button.card {
     background-color: #89f257;
     border-radius: 10px;
-    padding: 10px;
-    text-align: center;
-    font-size: 2em;
+    font-size: 2vw; /* Adjust font size relative to viewport */
     color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 button.card.found {
@@ -175,19 +188,28 @@ div.newGame button{
 
 
 /*-----------------------Footer----------------------*/
-div.footer-text {
-    text-align: center;
-    font-size: 1em;
-    margin-top: 50px;
-}
-
-
 
 
 /*-----------------------Media Query----------------------*/
 
 /* Desktop of groter */
 @media screen and (min-width: 1024px) {
+
+    /*----------------------General---------------------*/
+
+    div.parent {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(8, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+    }
+    div.title { grid-area: 1 / 1 / 2 / 3; }
+    div.pairs { grid-area: 2 / 2 / 4 / 3; }
+    div.remainingTime { grid-area: 4 / 2 / 6 / 3; }
+    div.gameBoard { grid-area: 2 / 1 / 8 / 2; }
+    div.gameControls { grid-area: 6 / 2 / 8 / 3; }
+    div.footer { grid-area: 8 / 1 / 9 / 3; }
 
     body {
         margin: 0;

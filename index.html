@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <title>Memory Game!</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <link href="assets/css/index.css" rel="stylesheet">
-        <link href="assets/css/global.css" rel="stylesheet">
+        <link href="css/index.css" rel="stylesheet">
+        <link href="css/global.css" rel="stylesheet">
     </head>
 
     <body>
@@ -47,7 +47,12 @@
                 <br>
 
                 <label for="size"> Board Size: </label>
-                <input id="size" name="size" type="number">
+                <select id="size" name="size">
+                    <option value="4x4">4x4</option>
+                    <option value="6x6">6x6</option>
+                    <option value="8x8">8x8</option>
+                    <option value="10x10">10x10</option>
+                </select>
 
                 <br>
 
@@ -69,7 +74,7 @@
             </div>
 
             <div class="startButton" style="background-color: purple">
-                <button> New Game</button>
+                <a href="game.html"> <button> New Game </button> </a>
             </div>
 
             <div class="footer" style="background-color: deeppink">
@@ -80,6 +85,6 @@
 
     </body>
 
-    <script src="assets/js/memory.js"></script>
+    <script src="assets/js/memory.js" type="module"></script>
 
 </html>

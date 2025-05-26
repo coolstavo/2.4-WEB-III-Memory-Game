@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: 'Helvetica Neue Local', sans-serif;
-    src: url('../fonts/HelveticaNeue.ttc') format('truetype');
+    src: url('../assets/fonts/HelveticaNeue.ttc') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -23,4 +23,10 @@
 body {
     background-color: #f0f0f0;
     font-size: 0.8em;
+}
+
+/*------------------------Footer-------------------------*/
+div.footer p {
+    text-align: center;
+    font-size: 1em;
 }
