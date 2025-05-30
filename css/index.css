@@ -225,6 +225,8 @@
 
     #pairsFound{}
 
+    #timer{}
+
     /*------------------------Remaining Time------------------------*/
 
     div.remainingTime progress[value] {
