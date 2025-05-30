@@ -26,6 +26,17 @@ body {
 }
 
 /*------------------------Footer-------------------------*/
+
+div.footer:nth-child(6) {
+    display: block;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
+    align-self: auto;
+    order: 0;
+    align-content: center;
+}
+
 div.footer p {
     text-align: center;
     font-size: 1em;

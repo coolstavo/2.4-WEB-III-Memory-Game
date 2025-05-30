@@ -1,9 +1,11 @@
-/*-------------------------General-----------------------------*/
+#index {
+
+    /*==========================INDEX==============================*/
+    /*-------------------------General-----------------------------*/
 
 
-/*-------------------------Flexbox-----------------------------*/
+    /*-------------------------Flexbox-----------------------------*/
 
-div.parent {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -11,137 +13,389 @@ div.parent {
     justify-content: stretch;
     text-align: center;
     height: 100vh;
-}
 
-div.title:nth-child(1) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-div.top5:nth-child(2) {
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-div.username:nth-child(3) {
-    display: block;
-    flex-grow: 0.5;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-div.decorations:nth-child(4) {
-    display: block;
-    flex-grow: 0.2;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-div.startButton:nth-child(5) {
-    display: block;
-    flex-grow: 1;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-div.footer:nth-child(6) {
-    display: block;
-    flex-grow: 0;
-    flex-shrink: 1;
-    flex-basis: auto;
-    align-self: auto;
-    order: 0;
-    align-content: center;
-}
-
-/*--------------------------Title-------------------------------*/
-
-div.title h1 {
-    font-size: 2em;
-    font-weight: 600;
-
-}
-
-/*--------------------------Top 5------------------------------*/
-
-div.top5 {}
-
-div.top5 li {
-    font-weight: bold;
-    align-items: center;
-}
-
-/*-------------------------Username----------------------------*/
-
-div.username {}
-
-/*------------------------Decorations--------------------------*/
-
-div.decorations {}
-
-/*------------------------Start Button-------------------------*/
-
-div.startButton a{
-    text-decoration: none;
-    color: black;
-}
-
-div.startButton button {
-    width: 40vh;
-    height: 20vh;
-    border-radius: 10px;
-    background-color: blueviolet;}
-
-/*---------------------------Footer---------------------------*/
-
-
-/*------------------------Media Query-------------------------*/
-
-/* Desktop of groter */
-@media screen and (min-width: 1024px) {
-
-    /*---------------------General----------------------*/
-    div.parent {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(7, 1fr);
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
+    div.titleIndex:nth-child(1) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
     }
-    div.title { grid-area: 1 / 1 / 2 / 3; }
-    div.top5 { grid-area: 2 / 2 / 6 / 3; }
-    div.username { grid-area: 2 / 1 / 4 / 2; }
-    div.decorations { grid-area: 4 / 1 / 6 / 2; }
-    div.startButton { grid-area: 6 / 1 / 7 / 3; }
-    div.footer { grid-area: 7 / 1 / 8 / 3; }
 
-    /*-----------------------Title----------------------*/
+    div.top5:nth-child(2) {
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
 
-    /*---------------------Username---------------------*/
+    div.username:nth-child(3) {
+        display: block;
+        flex-grow: 0.5;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
 
-    /*--------------------Decorations-------------------*/
+    div.decorations:nth-child(4) {
+        display: block;
+        flex-grow: 0.2;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
 
-    /*--------------------Start Button------------------*/
+    div.startButton:nth-child(5) {
+        display: block;
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
 
-    /*----------------------Footer----------------------*/
+    /*--------------------------Title-------------------------------*/
 
+    div.titleIndex h1 {
+        font-size: 2em;
+        font-weight: 600;
+
+    }
+
+    /*--------------------------Top 5------------------------------*/
+
+    div.top5 {}
+
+    div.top5 li {
+        font-weight: bold;
+        align-items: center;
+    }
+
+    /*-------------------------Username----------------------------*/
+
+    div.username {}
+
+    /*------------------------Decorations--------------------------*/
+
+    div.decorations {}
+
+    /*------------------------Start Button-------------------------*/
+
+    div.startButton a{
+        text-decoration: none;
+        color: black;
+    }
+
+    div.startButton button {
+        width: 40vh;
+        height: 20vh;
+        border-radius: 10px;
+        background-color: blueviolet;}
+
+    /*---------------------------Footer---------------------------*/
+
+
+    /*------------------------Media Query-------------------------*/
+
+    /* Desktop of groter */
+    @media screen and (min-width: 1024px) {
+
+        /*---------------------General----------------------*/
+        div.parent {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(7, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        div.title { grid-area: 1 / 1 / 2 / 3; }
+        div.top5 { grid-area: 2 / 2 / 6 / 3; }
+        div.username { grid-area: 2 / 1 / 4 / 2; }
+        div.decorations { grid-area: 4 / 1 / 6 / 2; }
+        div.startButton { grid-area: 6 / 1 / 7 / 3; }
+        div.footer { grid-area: 7 / 1 / 8 / 3; }
+
+        /*-----------------------Title----------------------*/
+
+        /*---------------------Username---------------------*/
+
+        /*--------------------Decorations-------------------*/
+
+        /*--------------------Start Button------------------*/
+
+        /*----------------------Footer----------------------*/
+
+    }
+
+    /*==========================INDEX==============================*/
+}
+
+#game {
+    /*===========================GAME==============================*/
+
+    /*-------------------------General-----------------------------*/
+
+    /*-------------------------Flexbox-----------------------------*/
+
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    justify-content: stretch;
+    text-align: center;
+    height: 100vh;
+
+    div.title:nth-child(1) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
+
+    div.pairs:nth-child(2) {
+        display: block;
+        flex-grow: 0.5;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
+
+    div.remainingTime:nth-child(3) {
+        display: block;
+        flex-grow: 0;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
+
+    div.gameBoard:nth-child(4) {
+        display: block;
+        flex-grow: 2;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
+
+    div.gameControls:nth-child(5) {
+        display: block;
+        flex-grow: 0.5;
+        flex-shrink: 1;
+        flex-basis: auto;
+        align-self: auto;
+        order: 0;
+        align-content: center;
+    }
+
+
+    /*--------------------------Title-------------------------------*/
+
+    div.title h1 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    div.title a {
+        text-decoration: none;
+        color: black;
+    }
+
+    /*----------------------------Pairs-----------------------------*/
+
+    div.pairs {}
+
+    #pairsFound{}
+
+    /*------------------------Remaining Time------------------------*/
+
+    div.remainingTime progress[value] {
+        appearance: none;
+        -webkit-appearance: none;
+        justify-content: center;
+        float: left;
+    }
+
+    div.remainingTime progress::-webkit-progress-value {
+        background-color: orangered;
+        border-radius: 10px;
+    }
+
+    div.remainingTime progress[value]::-webkit-progress-bar{
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        width: 100vw;
+    }
+
+
+    /*---------------------------Game Board------------------------------*/
+
+    div.board {
+        display: grid;
+        /*grid-template-columns: repeat(6, 1fr);*/
+        /*grid-template-rows: repeat(6, 1fr);*/
+        gap: 3px;
+        width: 90vw; /* Adjust to fit within the viewport */
+        height: 90vw; /* Keep it square */
+        max-width: 80vh; /* Limit size based on viewport height */
+        max-height: 80vh; /* Limit size based on viewport height */
+        margin: auto; /* Center the board */
+    }
+
+    button.card {
+        background-color: #89f257;
+        border-radius: 10px;
+        font-size: 2vw; /* Adjust font size relative to viewport */
+        color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    button.card.found {
+        background-color: blueviolet;
+    }
+
+    button.card.open {
+        background-color: darkgreen;
+    }
+
+    /*---------------------------Game Controls------------------------------*/
+    div.gameControls {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.gameControls button {
+        width: 40vw; /* Adjust to fit within the viewport */
+        height: 10vh; /* Adjust height for better visibility */
+        border-radius: 10px;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.5em; /* Adjust font size for readability */
+        margin-top: 20px; /* Space between buttons */
+    }
+
+    div button.newGame {
+
+    }
+
+    div button.saveScore{
+        margin-top: 20px; /* Space between buttons */
+    }
+
+    /*-----------------------Media Query----------------------*/
+
+    /* Desktop of groter */
+    @media screen and (min-width: 1024px) {
+
+        /*----------------------General---------------------*/
+
+        div.parent {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(8, 1fr);
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+        }
+        div.title { grid-area: 1 / 1 / 2 / 3; }
+        div.pairs { grid-area: 2 / 2 / 4 / 3; }
+        div.remainingTime { grid-area: 4 / 2 / 6 / 3; }
+        div.gameBoard { grid-area: 2 / 1 / 8 / 2; }
+        div.gameControls { grid-area: 6 / 2 / 8 / 3; }
+        div.footer { grid-area: 8 / 1 / 9 / 3; }
+
+        body {
+            margin: 0;
+        }
+
+        hr{
+            display: none;
+        }
+
+        /*-----------------------Header----------------------*/
+
+        div.header h1 {
+            font-size: 2.5em;
+        }
+
+        div.header {
+            font-size: 1.5em;
+            margin-bottom: 50px;
+        }
+
+        progress {
+            width: 40vh;
+            margin-top: 5px;
+        }
+
+        /*-----------------------Bord----------------------*/
+
+        div.bord {
+            width: 70vh;
+            height: 70vh;
+        }
+
+        button.card {
+            font-size: 3em;
+        }
+
+        /*-----------------------Top 5----------------------*/
+
+        div.top5 {
+            margin-bottom:0;
+            margin-top: 40px;
+            font-size: 1.5em;
+            margin-right: 100px;
+        }
+
+        /*-----------------------Informatie----------------------*/
+
+        div.colors {
+            font-size: 1.5em;
+            margin-top: 100px;
+            margin-right: 100px;
+            width: 50vh;
+            float: right;
+        }
+
+        /*-----------------------Nieuw Spel----------------------*/
+
+        div.newGame{
+            float: right;
+            margin-right: 100px;
+            margin-top: 100px;
+        }
+
+        div.newGame button{
+            font-size: 1.8em;
+            border-radius: 10px;
+            background-color: blueviolet;
+
+        }
+
+    }
+
+
+    /*===========================GAME==============================*/
 }
