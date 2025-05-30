@@ -10,9 +10,9 @@
 
     <body>
 
-        <div class="parent" style="background-color: red">
+        <div class="parentIndex" id="index" style="background-color: red">
 
-            <div class="title" style="background-color: orange">
+            <div class="titleIndex" style="background-color: orange">
                 <h1> Memory Game </h1>
             </div>
 
@@ -48,10 +48,9 @@
 
                 <label for="size"> Board Size: </label>
                 <select id="size" name="size">
-                    <option value="4x4">4x4</option>
-                    <option value="6x6">6x6</option>
-                    <option value="8x8">8x8</option>
-                    <option value="10x10">10x10</option>
+                    <option value="2">2x2</option>
+                    <option value="4">4x4</option>
+                    <option value="6">6x6</option>
                 </select>
 
                 <br>
@@ -74,7 +73,7 @@
             </div>
 
             <div class="startButton" style="background-color: purple">
-                <a href="game.html"> <button> New Game </button> </a>
+                <button id="newGameButton"> New Game </button>
             </div>
 
             <div class="footer" style="background-color: deeppink">
@@ -83,8 +82,46 @@
 
         </div>
 
+        <div class="parentGame" id="game" style="background-color: red">
+
+            <div class="titleGame" style="background-color: orange">
+                <!-- TODO: Username dynamisch inzetten -->
+                <!-- TODO: Link naar home -->
+                <a href="index.html"> <h1> Memory Game </h1> </a>
+            </div>
+
+            <div class="pairs" style="background-color: yellow">
+                <p id="pairsFound"> Pairs Found: ... </p>
+            </div>
+
+            <div class="remainingTime" style="background-color: green">
+                <label for="time"> Remaining time </label>
+                <br>
+                <progress id="time" max="100" value="86"></progress>
+            </div>
+
+            <div class="gameBoard" style="background-color: blue">
+                <div class="board">
+                    <!-- Generated -->
+                </div>
+            </div>
+
+            <div class="gameControls" style="background-color: purple">
+                <button class="newGame" type="reset">New Game</button>
+                <button class="saveScore" type="submit">Save Score</button>
+            </div>
+
+            <div class="footer" style="background-color: deeppink">
+                <p>&copy; 2025 Gustavo Henrique Costa Araujo <br>
+                    Hanze, HBO-ICT, Software Engineering <br>
+                    Webtechnologies III
+                </p>
+            </div>
+
+        </div>
+
     </body>
 
-    <script src="assets/js/memory.js" type="module"></script>
+    <script src="js/main.js" type="module"></script>
 
 </html>
