@@ -1,7 +1,7 @@
-// --- Imports ---
+// -------------------- Imports --------------------
 import {initializeBoard} from "./util.js";
 
-// --- Initialization ---
+// ----------------- Initialization ----------------
 
 let gameStarted = false;
 
@@ -9,19 +9,44 @@ if (!gameStarted) {
     document.getElementById('game').style.display = 'none';
 }
 
-document.getElementById('newGameButton').addEventListener('click', () => {
+let newGameButton = document.getElementById('newGameButton');
+newGameButton.addEventListener('click', () => {
     gameStarted = true;
     document.getElementById('game').style.display = '';
     document.getElementById('index').style.display = 'none';
+    startTimer();
 });
 
-// --- Game has started ---
-// --- Logic for cards in game board ---
-let sizeSelect = document.getElementById('size');
-let size = sizeSelect.options[sizeSelect.selectedIndex].value;
-sizeSelect.addEventListener('change', (e) => {
-    size = e.target.value ?? 4; // Default to 4 if no value is selected
+// --------------- Game = started -----------------
+// ----------------- Logic board ------------------
+const sizeSelect = document.getElementById('size');
+let size = sizeSelect.value;
 
-    // TODO: the gameboard doesnt load when the size is greater than 7, fix this!!!
+function handleSizeChange(newSize) {
+    size = newSize;
     initializeBoard(size);
+}
+
+// TODO: the gameboard doesnt load when the size is greater than 7, fix this!!!
+handleSizeChange(size);
+
+// Update board when size changes
+sizeSelect.addEventListener('change', (e) => {
+    handleSizeChange(e.target.value);
 });
+
+// ----------------- Timer ------------------------
+let timerElement = document.getElementById('timer');
+let timer = 0;
+let timerInterval;
+
+function startTimer() {
+    timerInterval = setInterval(() => {
+        timer++;
+        timerElement.textContent = `Time: ${timer} seconds`;
+    }, 1000);
+}
+
+function stopTimer() {
+    clearInterval(timerInterval);
+}
