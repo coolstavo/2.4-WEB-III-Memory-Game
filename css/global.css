@@ -1,6 +1,8 @@
 /*-----------------------Variables----------------------*/
 :root {
-
+    --card-open: darkgreen;
+    --card-found: blueviolet;
+    --card-default: #89f257;
 }
 
 /*------------------------Fonts-------------------------*/
