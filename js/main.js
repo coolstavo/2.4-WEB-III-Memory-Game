@@ -1,31 +1,22 @@
-// -------------------- Imports --------------------
-import {initializeBoard} from "./util.js";
+// -------------------------------------- Imports ---------------------------------------
+import {addCardEventListeners, handleSizeChange, startTimer, stopTimer, initializeBoard} from "./util.js";
 
-// ----------------- Initialization ----------------
+// ----------------------------------- Initialization -----------------------------------
+let index = document.getElementById('index');
+let game = document.getElementById('game');
 
-let gameStarted = false;
-
-if (!gameStarted) {
-    document.getElementById('game').style.display = 'none';
-}
+game.style.display = 'none';
 
 let newGameButton = document.getElementById('newGameButton');
 newGameButton.addEventListener('click', () => {
-    gameStarted = true;
-    document.getElementById('game').style.display = '';
-    document.getElementById('index').style.display = 'none';
+    game.style.display = '';
+    index.style.display = 'none';
     startTimer();
 });
 
-// --------------- Game = started -----------------
-// ----------------- Logic board ------------------
+// ------------------------------------- Logic board ------------------------------------
 const sizeSelect = document.getElementById('size');
 let size = sizeSelect.value;
-
-function handleSizeChange(newSize) {
-    size = newSize;
-    initializeBoard(size);
-}
 
 // TODO: the gameboard doesnt load when the size is greater than 7, fix this!!!
 handleSizeChange(size);
@@ -33,20 +24,25 @@ handleSizeChange(size);
 // Update board when size changes
 sizeSelect.addEventListener('change', (e) => {
     handleSizeChange(e.target.value);
+    addCardEventListeners();
 });
 
-// ----------------- Timer ------------------------
-let timerElement = document.getElementById('timer');
-let timer = 0;
-let timerInterval;
+// ----------------------- Color settings -----------------------------------
 
-function startTimer() {
-    timerInterval = setInterval(() => {
-        timer++;
-        timerElement.textContent = `Time: ${timer} seconds`;
-    }, 1000);
-}
+let cardColor = document.getElementById('cardColor');
+cardColor.addEventListener('input', (e) => {
+    document.documentElement.style.setProperty('--card-default', e.target.value);
+});
 
-function stopTimer() {
-    clearInterval(timerInterval);
-}
+let open = document.getElementById('open')
+open.addEventListener('input', (e) => {
+    document.documentElement.style.setProperty('--card-open', e.target.value);
+});
+
+let closed = document.getElementById('closed');
+closed.addEventListener('input', (e) => {
+    document.documentElement.style.setProperty('--card-found', e.target.value);
+});
+
+// ----------------------- Card click logic -----------------------------------
+addCardEventListeners();
