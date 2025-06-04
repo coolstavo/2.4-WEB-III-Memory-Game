@@ -29,20 +29,20 @@ sizeSelect.addEventListener('change', (e) => {
 
 // ----------------------- Color settings -----------------------------------
 
-let cardColor = document.getElementById('cardColor');
-cardColor.addEventListener('input', (e) => {
+document.getElementById('cardColor').addEventListener('input', (e) => {
     document.documentElement.style.setProperty('--card-default', e.target.value);
 });
 
-let open = document.getElementById('open')
-open.addEventListener('input', (e) => {
+document.getElementById('open').addEventListener('input', (e) => {
     document.documentElement.style.setProperty('--card-open', e.target.value);
 });
 
-let closed = document.getElementById('closed');
-closed.addEventListener('input', (e) => {
+document.getElementById('found').addEventListener('input', (e) => {
     document.documentElement.style.setProperty('--card-found', e.target.value);
 });
 
-// ----------------------- Card click logic -----------------------------------
+// ----------------------- Card click logic & Card matching -----------------------------------
+
 addCardEventListeners();
+
+

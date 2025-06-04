@@ -73,16 +73,18 @@
     align-items: center;
 }
 
-.startButton a{
-    text-decoration: none;
-    color: black;
-}
+.startButton {
+    a {
+        text-decoration: none;
+        color: black;
+    }
 
-.startButton button {
-    width: 40vh;
-    height: 20vh;
-    border-radius: 10px;
-    background-color: blueviolet;
+    button {
+        width: 40vh;
+        height: 20vh;
+        border-radius: 10px;
+        background-color: blueviolet;
+    }
 }
 
 /*===========================GAME==============================*/
@@ -110,7 +112,7 @@
     align-content: center;
 }
 
-.pairs {
+.info {
     display: block;
     flex-grow: 0.5;
     flex-shrink: 1;
@@ -150,37 +152,43 @@
     align-content: center;
 }
 
-.titleGame h1 {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 600;
+.titleGame {
+    h1 {
+        text-align: center;
+        font-size: 2em;
+        font-weight: 600;
+    }
+
+    a {
+        text-decoration: none;
+        color: black;
+    }
 }
 
-.titleGame a {
-    text-decoration: none;
-    color: black;
-}
 
-.pairs {}
+.info {}
 #pairsFound{}
 #timer{}
 
-.remainingTime progress[value] {
-    appearance: none;
-    -webkit-appearance: none;
-    justify-content: center;
-    float: left;
-}
+.remainingTime {
 
-.remainingTime progress::-webkit-progress-value {
-    background-color: orangered;
-    border-radius: 10px;
-}
+    progress[value] {
+        appearance: none;
+        -webkit-appearance: none;
+        justify-content: center;
+        float: left;
+    }
 
-.remainingTime progress[value]::-webkit-progress-bar{
-    background-color: #e0e0e0;
-    border-radius: 10px;
-    width: 100vw;
+    progress::-webkit-progress-value {
+        background-color: orangered;
+        border-radius: 10px;
+    }
+
+    progress[value]::-webkit-progress-bar{
+        background-color: #e0e0e0;
+        border-radius: 10px;
+        width: 100vw;
+    }
 }
 
 .gameBoard .board {
@@ -233,14 +241,14 @@ button.card {
 
 .card-back {
     background-color: var(--card-open);
-    color: #fff;
     transform: rotateY(180deg);
     font-size: 2vw;
     font-weight: bold;
 }
 
 button.card.found .card-back {
-    background-color: var(--card-found);
+    background-color: var(--card-found) !important;
+    color: #fff;
 }
 
 .gameControls {
@@ -248,20 +256,27 @@ button.card.found .card-back {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    button {
+        width: 40vw;
+        height: 10vh;
+        border-radius: 10px;
+        background-color: blueviolet;
+        color: white;
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
 }
 
-.gameControls button {
-    width: 40vw;
-    height: 10vh;
-    border-radius: 10px;
-    background-color: blueviolet;
-    color: white;
-    font-size: 1.5em;
-    margin-top: 20px;
-}
+button {
+    button.newGame {
 
-button.newGame {}
-button.saveScore{ margin-top: 20px; }
+    }
+
+    button.saveScore{
+        margin-top: 20px;
+    }
+}
 
 
 /*======================Media Query======================*/
@@ -289,7 +304,7 @@ button.saveScore{ margin-top: 20px; }
         grid-row-gap: 0;
     }
     .titleGame { grid-area: 1 / 1 / 2 / 3; }
-    .pairs { grid-area: 2 / 2 / 4 / 3; }
+    .info { grid-area: 2 / 2 / 4 / 3; }
     .remainingTime { grid-area: 4 / 2 / 6 / 3; }
     .gameBoard { grid-area: 2 / 1 / 8 / 2; }
     .gameControls { grid-area: 6 / 2 / 8 / 3; }
